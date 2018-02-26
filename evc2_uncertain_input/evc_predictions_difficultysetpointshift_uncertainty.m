@@ -70,15 +70,15 @@ opt1_unc=[min(values(vsind(1)), values(vsind(2))):max(values(vsind(1)),  values(
 opt2_unc=[min(values(vsind(3)), values(vsind(4))):max(values(vsind(3)),  values(vsind(4)))];
 
 %we can do this with every value between the min and max for each option,
-%but that slows things way down.  So let's select at most 20 samples from
+%but that slows things way down.  So let's select at most 5 samples from
 %each distribution.  This doesn't really change anything, but the at least
 %it runs more quickly
 
-if length(opt1_unc)>20   
-    opt1_unc=randsample(opt1_unc,20);
+if length(opt1_unc)>5   
+    opt1_unc=randsample(opt1_unc,5);
 end
-if length(opt2_unc)>20
-    opt2_unc=randsample(opt2_unc, 20);
+if length(opt2_unc)>5
+    opt2_unc=randsample(opt2_unc, 5);
 end
 
 
