@@ -20,7 +20,7 @@
 %change the point at which the model is equally likely to choose
 %between two options.
 gammas=[.01 .1:.1:1 2:2:50];
-
+gammas=[.01 1 2:2:20];
 gamma_labels={};
 runs=10;
 allgm=0; %variable for storing results of each run

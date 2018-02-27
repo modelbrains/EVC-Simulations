@@ -84,9 +84,9 @@ ev_all=(ev_opt1+ev_opt2)./1;
 
 %%%%%Now get a response from the model, compute Pred. Err., and take negative surprise
 if rand<p_opt1_given_effort%model chose option 1
-    pe_resp=[ev1-ev_opt1 ev_opt1-ev2];
+     pe_resp=[ev1-ev_opt1 0-ev_opt2];
 else
-    pe_resp=[ev_opt2-ev1 ev2-ev_opt2];
+    pe_resp=[0-ev_opt1 ev2-ev_opt2];
 end
 pe_resp(pe_resp>0)=0;
 pe_resp=abs(pe_resp);
